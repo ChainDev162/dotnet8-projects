@@ -1,2 +1,1 @@
-# .net8-projects
-projects that i do when bored in C#, most code is from ebola man on youtube
+# switch to master for the files, i'll switch to main later.
