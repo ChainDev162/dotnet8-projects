@@ -9,5 +9,9 @@
 <!--       <RuntimeIdentifier>win-x64</RuntimeIdentifier> # uncomment that for
                                                        # windows 64-bit exes -->
     </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
 
 </Project>
