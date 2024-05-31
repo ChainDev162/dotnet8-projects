@@ -9,7 +9,7 @@ namespace things
         private static async Task Main()
         {
             Console.Title = "login2token";
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             const string multiLineString = """
                                             _        _______  _______ _________ _        _______ _________ _______  _        _______  _       
                                            ( \      (  ___  )(  ____ \\__   __/( (    /|/ ___   )\__   __/(  ___  )| \    /\(  ____ \( (    /|
