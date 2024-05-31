@@ -19,7 +19,7 @@ ive only tested this on debian because thats what i use on a daily basis, so if 
 - any c# ide *(optional as you can build with the* `dotnet publish [args]` *command)*
   
 
-1. clone the repo: `git clone https://github.com/ChainDev162/.net8-projects.git && cd .net8-projects && git checkout master`
+1. clone the repo: `git clone https://github.com/ChainDev162/dotnet8-projects.git && cd dotnet8-projects && git checkout master`
   
 2. edit the **.csproj** files (*or just uncomment line 8 for* `ip2geo/ip2geo.csproj`*, line 9 for*`login2token/login2token.csproj`, *for windows exes.*)
   
