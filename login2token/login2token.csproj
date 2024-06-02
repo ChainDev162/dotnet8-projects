@@ -6,8 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>things</RootNamespace>
-<!--       <RuntimeIdentifier>win-x64</RuntimeIdentifier> # uncomment that for
-                                                       # windows 64-bit exes -->
+<!--    <RuntimeIdentifier>win-x64</RuntimeIdentifier> --> <!-- uncomment that for windows 64-bit exes -->
     </PropertyGroup>
     
     <ItemGroup>
