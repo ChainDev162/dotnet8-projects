@@ -44,4 +44,4 @@ ive only tested this on debian because thats what i use on a daily basis, so if 
   
 3. finally, run `dotnet publish`, if you edited the files it'll build the exes, the output should be something like this:![](https://github.com/ChainDev162/dotnet8-projects/blob/master/2024-05-31-17-41-53-image.png)
    
-  that means that its been built successfully, now just run the exes in the mentioned directories
+  that means that its been built successfully, now just run the exes in the mentioned directories.
