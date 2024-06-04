@@ -23,9 +23,11 @@ PS: this tool is not for skids just because, well i hate them!
   
 3. install the `Newtonsoft.Json` library (might autoinstall idk i told it to include the library, but install it just in case)
   
-4. right click any project within the solution or the solution > publish, and wait for it to compile (you can alternatively just run the project)
+5. right click any project within the solution or the solution > publish, and wait for it to compile (you can alternatively just run the project)
   
-5. now run the compiled binaries
+6. now run the compiled binaries
+
+⚠️ if compiling results in errors **make sure to include System and other System libraries ⚠️**
 
 # compiling from src (linux)
 
