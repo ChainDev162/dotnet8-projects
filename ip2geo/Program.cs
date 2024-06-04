@@ -160,6 +160,6 @@ internal abstract class Program
         // [00:11:09 ERROR] failed to resolve ip addr for domain: google.com
         // expected output ^
         // the "ERROR" string has to be red, as you can see from the var.
-        // my discord is @"fentables", as mentioned in 47:136
+        // my discord is @fentables., as mentioned in 47:136
     }
 }
