@@ -44,7 +44,7 @@ internal abstract class Program
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write($"[{DateTime.Now:HH:mm:ss} WARNING]");
         Console.ResetColor();
-        Console.WriteLine(" getting domain name's ips is still being figured out, if you find a solution please contact me on discord, @"fentables", ill hand over the src.");
+        Console.WriteLine(" getting domain name's ips is still being figured out, if you find a solution please contact me on discord, @fentables., ill hand over the src.");
         Console.Write("enter the ip addr or domain name: ");
         var userInput = Console.ReadLine();
 
