@@ -44,7 +44,7 @@ internal abstract class Program
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write($"[{DateTime.Now:HH:mm:ss} WARNING]");
         Console.ResetColor();
-        Console.WriteLine(" getting domain name's ips is still being figured out, if you find a solution please contact me on discord, @iircc, ill hand over the src.");
+        Console.WriteLine(" getting domain name's ips is still being figured out, if you find a solution please contact me on discord, @"fentables", ill hand over the src.");
         Console.Write("enter the ip addr or domain name: ");
         var userInput = Console.ReadLine();
 
@@ -160,6 +160,6 @@ internal abstract class Program
         // [00:11:09 ERROR] failed to resolve ip addr for domain: google.com
         // expected output ^
         // the "ERROR" string has to be red, as you can see from the var.
-        // my discord is @iircc, as mentioned in 47:136
+        // my discord is @"fentables", as mentioned in 47:136
     }
 }
