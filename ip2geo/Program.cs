@@ -1,5 +1,6 @@
-﻿// ip2geo by uzrboot
+// ip2geo by uzrboot
 // v1 had ip-only support, but now v2 also has domain name support.
+// now v2.1 optimized the code a bit, removed some redundant (aka useless) code. 
 
 using System.Net;
 using Newtonsoft.Json;
@@ -35,14 +36,13 @@ internal abstract class Program
                                        \_______/|/       \_______/(_______)(_______/(_______)
                                        """;
         Console.Clear();
-
+        Console.WriteLine(multiLineString);
         // todo center text
-        Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (multiLineString.Length / 2)) + "}", multiLineString));
+        // Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (multiLineString.Length / 2)) + "}", multiLineString));
         
         Console.ResetColor();
         Console.ForegroundColor = ConsoleColor.Yellow;
-        var currentTime = DateTime.Now;
-        Console.Write("[" + currentTime.ToString("HH:mm:ss") + " WARNING]");
+        Console.Write($"[{DateTime.Now:HH:mm:ss} WARNING]");
         Console.ResetColor();
         Console.WriteLine(" getting domain name's ips is still being figured out, if you find a solution please contact me on discord, @iircc, ill hand over the src.");
         Console.Write("enter the ip addr or domain name: ");
@@ -75,20 +75,16 @@ internal abstract class Program
         using var client = new HttpClient();
         try
         {
-            
-            var currentTimeframes = DateTime.Now;
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("[" + currentTimeframes.ToString("HH:mm:ss") + " INFO]");
+            Console.WriteLine($"[{DateTime.Now:HH:mm:ss} INFO] making request...");  
             Console.ResetColor();
-            Console.WriteLine(" making request...");
+            
             var response = await client.GetAsync(url);
             response.EnsureSuccessStatusCode();
             
-            var now = DateTime.Now;
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("[" + now.ToString("HH:mm:ss") + " SUCCESS]");
+            Console.WriteLine($"[{DateTime.Now:HH:mm:ss} SUCCESS] request made successfully");  
             Console.ResetColor();
-            Console.WriteLine(" request made successfully");
             
             var responseData = await response.Content.ReadAsStringAsync();
             var ipInfo = JsonConvert.DeserializeObject<Data>(responseData);
@@ -139,11 +135,9 @@ internal abstract class Program
         }
         catch (HttpRequestException exception)
         {
-            var currentTimeframes = DateTime.Now;
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("[" + currentTimeframes.ToString("HH:mm:ss") + " ERROR]");
-            Console.ResetColor();
-            Console.WriteLine($" {exception.Message}");
+            Console.WriteLine($"[{DateTime.Now:HH:mm:ss} ERROR] {exception.Message}");  
+            Console.ResetColor();                                                            
             Console.ReadLine();
         }
     }
@@ -158,13 +152,14 @@ internal abstract class Program
                 return address;
             }
         }
-        var currentTimeframes = DateTime.Now;
-        Console.ForegroundColor = ConsoleColor.Red;                                    // <---<
-        Console.Write("[" + currentTimeframes.ToString("HH:mm:ss") + " ERROR]");   // <---<  this snippet doesn't work
+
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"[{DateTime.Now:HH:mm:ss} ERROR] Failed to resolve IP address for domain: {domain}");  // <---<  this snippet doesn't work
         Console.ResetColor();                                                             // <---<
         throw new Exception($"failed to resolve ip addr for domain: {domain}");    // <---<
         // [00:11:09 ERROR] failed to resolve ip addr for domain: google.com
         // expected output ^
-        // the error string has to be red, as you can see from the var.
+        // the "ERROR" string has to be red, as you can see from the var.
+        // my discord is @iircc, as mentioned in 47:136
     }
 }
