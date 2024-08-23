@@ -1,5 +1,3 @@
-## ⚠️ help needed, check ip2geo/Program.cs todos ⚠️
-
 # tools
 
 these are just some projects i do while im bored, im still learning c# and experimenting with whatever i know or will know.
